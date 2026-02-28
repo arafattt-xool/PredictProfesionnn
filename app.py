@@ -19,8 +19,8 @@ category_mapping = {
 }
 
 # --- Streamlit App --- #
-st.title('Big Five Personality Profession Predictor')
-
+st.title('Predice tu profesión ideal')
+nombre = st.text_input('Ingresa tu nombre')
 st.write("Enter your Big Five personality scores to predict your potential profession.")
 
 # Input fields for personality traits using sliders
@@ -60,4 +60,4 @@ if st.button('Predict Profession'):
     # Map the numerical prediction to the category name
     predicted_profession = category_mapping.get(prediction_numeric, 'Unknown Category')
 
-    st.success(f"Based on your scores, your predicted profession is: **{predicted_profession}**")
+    st.success(f"Hola **{nombre}** Based on your scores, your predicted profession is: **{predicted_profession}**")
